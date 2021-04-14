@@ -23,6 +23,18 @@ const dashboard = () => {
     setMessage(response.message);
   };
 
+  const val = async () => {
+    const response = await fetch('/api/spotify', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data), // body data type must match "Content-Type" header
+    }).then((res) => res.json());
+    console.log(response);
+    setMessage(response.message);
+  };
+
   // app.get('/login', function(req, res) {
   //   var scopes = 'user-read-private user-read-email';
   //   res.redirect('https://accounts.spotify.com/authorize' +
