@@ -45,6 +45,12 @@ const dashboard = () => {
   //   });
 
   let { query } = router;
+  const openGoogle = () => {
+    console.log("Fuck this shit")
+  }
+  const openFacebook = () => {
+    console.log("Fuck Facebook")
+  }
   return (
     <div>
       {!message ? (
@@ -56,6 +62,11 @@ const dashboard = () => {
       ) : (
         <h1>{message}</h1>
       )}
+      <div onClick = {openGoogle()}>
+        Ekwoh jahan
+          <button onClick={openFacebook()}>Imtehaan</button>
+        beintehaan
+        </div>
     </div>
   );
 };
