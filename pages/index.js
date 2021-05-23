@@ -16,6 +16,17 @@ export default function Home() {
   };
   return (
     <div className={styles.container}>
+      <>
+        {session?.user ? (
+          <a href='#' onClick={handleLogout}>
+            Logout
+          </a>
+        ) : (
+          <a href='#' onClick={handleLogin}>
+            Login
+          </a>
+        )}
+      </>
       <pre>{JSON.stringify(session, null, 2)}</pre>
     </div>
   );
